@@ -17,12 +17,19 @@ require_once("config.php");
 //echo json_encode($search);
 
 //carrega um usuário usando o login e senha
+//$usuario = new Usuario();
+//$usuario->login("root","123");
+//echo $usuario;
+
+//insert de um usuário novo
+//$aluno = new Usuario("irineu", "abc123");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("root","123");
-
+$usuario->loadById(7);
+$usuario->update("voce", "qwerty");
 echo $usuario;
-
-
 /*
 $sql = new Sql();
 $usuarios = $sql->select("SELECT * FROM tb_usuarios");
