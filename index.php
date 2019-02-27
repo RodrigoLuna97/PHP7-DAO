@@ -26,11 +26,20 @@ require_once("config.php");
 //$aluno->insert();
 //echo $aluno;
 
+/*update do usuário
 $usuario = new Usuario();
 $usuario->loadById(7);
 $usuario->update("voce", "qwerty");
+echo $usuario;*/
+
+
+$usuario = new Usuario();
+$usuario->loadById(6);
+$usuario->delete();
 echo $usuario;
-/*
+
+
+/* SELECT COM JSON ENCODE
 $sql = new Sql();
 $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 echo json_encode($usuarios);
